@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 import Home from './User/Home';
 import AdminHome from './Admin/AdminHome';
 import AdminLogin from './Admin/AdminLogin';
-import AdminSignup from './Admin/AdminSignup';
 import AllExecutives from './Admin/AllExecutives';
 import ExecutiveUpdate from './Admin/ExecutiveUpdate';
 import AddCustomer from './User/AddCustomer';
@@ -44,10 +43,6 @@ function App() {
       element: token ? <DailyCustomerUpdate /> : <Login />
     }
     ,
-    {
-      path: '/Adminsignup',
-      element: <AdminSignup />
-    },
     {
       path: "/Admin",
       element: Admintoken ? <AdminHome /> : <AdminLogin />

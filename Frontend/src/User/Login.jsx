@@ -44,16 +44,17 @@ function Login() {
           <button className="login-button" onClick={APIcallLogin} disabled={loading}>
             {loading ? <FaSpinner className="spinner" /> : 'Log In'}
           </button>
+          <div className="divider">
+            <div className="line"></div>
+            <div className="or">OR</div>
+            <div className="line"></div>
+          </div>
+          <Link to={"/Admin"} className="forgot-password" >
+            Admin Login
+          </Link>
         </div>
-        <div className="divider">
-          <div className="line"></div>
-          <div className="or">OR</div>
-          <div className="line"></div>
-        </div>
-        <Link to={"/Admin"} className="forgot-password" >
-        Admin Login
-        </Link>
       </div>
+
     </div>
   );
 }
