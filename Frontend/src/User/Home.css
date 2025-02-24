@@ -11,6 +11,20 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
+.loading_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.loading_text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+
 /* Top Section Styling */
 .topSectionMain_div_userHomepage {
   padding-top: 8%;
