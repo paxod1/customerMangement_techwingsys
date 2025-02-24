@@ -18,8 +18,6 @@ function FollowUpSidebar({ followups }) {
         try {
             const response = await TokenRequest.put('/user/removeFollowContent', { id });
             alert(response.data.message);
-            
-            // **Update state by filtering out the removed follow-up**
             setData(prevData => prevData.filter(followup => followup.id !== id));
         } catch (error) {
             console.error('Error deleting follow-up:', error);

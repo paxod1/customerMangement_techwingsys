@@ -22,7 +22,6 @@ export const loginUser = async (data, dispatch) => {
     console.log(response.data);
     dispatch(LoginData(response.data));
 
-
   } catch (err) {
     // Check the error response for specific status or message
     if (err.response && err.response.status === 401) {
