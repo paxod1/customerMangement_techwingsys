@@ -45,6 +45,14 @@ function Login() {
             {loading ? <FaSpinner className="spinner" /> : 'Log In'}
           </button>
         </div>
+        <div className="divider">
+          <div className="line"></div>
+          <div className="or">OR</div>
+          <div className="line"></div>
+        </div>
+        <Link to={"/Admin"} className="forgot-password" >
+        Admin Login
+        </Link>
       </div>
     </div>
   );

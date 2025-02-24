@@ -36,7 +36,7 @@ function AdminLogin() {
             onChange={((e)=>setPassword(e.target.value))}
           />
           <button className="login-button" onClick={APIcallLogin}>Log In</button>
-
+    
         </div>
       </div>
     </div>
