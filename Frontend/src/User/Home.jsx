@@ -29,9 +29,9 @@ function Home() {
 
   useEffect(() => {
     if (logininfom) {
-      setTimeout(() => {
+ 
         setExecuId(logininfom.id);
-      }, 1000);
+     
     }
   }, [logininfom]);
 

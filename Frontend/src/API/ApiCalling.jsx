@@ -52,7 +52,7 @@ export const fetchcustomers = async (findid) => {
   console.log("api>>>>>>",findid);
   
   try {
-    const response = await TokenRequest.get("/user/allCustomerId", {
+    const response = await basicRequest.get("/user/allCustomerId", {
       params: { id: findid }
     });
     return response

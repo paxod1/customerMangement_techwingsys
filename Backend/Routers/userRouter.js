@@ -54,7 +54,7 @@ router.post('/addCustomer', verifyToken, async (req, res) => {
     }
 })
 
-router.get('/allCustomerId', verifyToken, async (req, res) => {
+router.get('/allCustomerId', async (req, res) => {
     const { id } = req.query;
     console.log("from backend>>>>>>>>>>>>>>>>>", id);
     try {
