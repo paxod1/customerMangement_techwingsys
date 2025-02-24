@@ -1,0 +1,50 @@
+.main_div_signup_page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner_main_div_signup_page{
+    height: 300px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.input_heading_signup{
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px;
+
+}
+
+.input_field_signup_page{
+    height: 25px;
+    width: 80%;
+    border: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding-left: 10px;
+
+}
+
+.form_section_signup{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.submit_button_signup{
+    height: 25px;
+    margin-top: 10px;
+    width: 40%;
+}

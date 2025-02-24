@@ -1,0 +1,139 @@
+/* Signup Container */
+.user_signup-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #150d2d, #1a1625);
+    
+}
+
+/* Signup Box */
+.user_signup-box_main {
+    border: 1px solid #dbdbdb;
+    padding: 30px 40px;
+    text-align: center;
+    width: 50%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    margin-top: 10%;
+    margin-bottom: 3%;
+}
+
+.user_inner_box_signup {
+    text-align: center;
+    width: 100%;
+    display: flex;
+}
+
+/* Image Preview */
+.user_image-upload {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 2px dashed #dbdbdb;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 2rem;
+}
+
+.user_image-upload-label {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.user_image-upload-placeholder {
+    font-size: 48px;
+    color: #dbdbdb;
+}
+
+.user_image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user_image-upload-input {
+    display: none;
+}
+
+.user_signup-form {
+    flex: 1;
+}
+
+/* Instagram Logo */
+.user_signup-logo {
+    margin-bottom: 20px;
+    color: rgb(201, 201, 201);
+}
+
+/* Signup Text */
+.user_signup-text {
+    font-size: 17px;
+    color: #8e8e8e;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Signup Input */
+.user_signup-input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    background:rgba(14, 3, 26, 0.455);
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    color: rgb(201, 201, 201);
+}
+
+/* Signup Button */
+.user_signup-button {
+    width: 100%;
+    padding: 10px;
+    background:rgba(14, 3, 26, 0.455);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: .2s;
+}
+
+.user_signup-button:hover {
+    background:rgba(14, 3, 26, 0.966);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+/* Terms and Conditions */
+.user_signup-terms {
+    font-size: 12px;
+    color: #8e8e8e;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user_signup-box_main {
+        width: 90%;
+    }
+}

@@ -1,0 +1,188 @@
+/* Top Section Styling */
+.topSectionMain_div_adminHomepage {
+  padding-top: 8%;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-light);
+  flex-wrap: wrap;
+}
+
+.topsection_inner_div_adminHomepage {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+
+.topsection_card_adminHomepage {
+  position: relative;
+  height: auto;
+  width: 180px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: visible;
+}
+
+.topsection_card_adminHomepage:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.topsection_card_adminHomepage svg {
+  position: relative;
+  font-size: 40px;
+  color: #fff;
+  background: var(--primary-color);
+  border-radius: 50%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.topsection_card_adminHomepage h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.topsection_card_adminHomepage p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+
+
+
+.middle_data_section_adminHomepage {
+  height: 650px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+  border-top: 1px solid #2d2349;
+}
+
+.middle_inner_div_adminHomepage {
+  margin-top: 3%;
+  width: 98%;
+  height: 100%;
+  overflow-y: auto;
+  justify-content: center;
+  border: 2px solid #2d2349;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.customer_table_adminhomepage {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.customer_table_adminhomepage thead {
+  background-color: #2d2349;
+  color: white;
+}
+
+.customer_table_adminhomepage th,
+.customer_table_adminhomepage td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.customer_table_adminhomepage tbody tr:nth-child(even) {
+  background-color: #f4f4f8;
+}
+
+.customer_table_adminhomepage tbody tr:hover {
+  background-color: #e0e0f0;
+  cursor: pointer;
+}
+
+.customer_actions_button_adminhomepage {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #2d2349;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.customer_actions_button_adminhomepage:hover {
+  background-color: #1b132f;
+}
+
+.searchbar_adminhomepage {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.searchbar_adminhomepage:focus {
+  outline: none;
+  border-color: #6a5af9;
+  box-shadow: 0 0 5px rgba(106, 90, 249, 0.5);
+}
+
+
+@media (max-width: 768px) {
+  .topSectionMain_div_adminHomepage {
+    padding-top: 19%;
+
+  }
+
+  .topsection_card_adminHomepage {
+    width: 150px;
+    padding: 10px;
+  }
+
+  .customer_table_adminhomepage {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topsection_card_adminHomepage {
+    width: 120px;
+    padding: 8px;
+  }
+
+  .topsection_card_adminHomepage h3 {
+    font-size: 0.8rem;
+  }
+
+  .topsection_card_adminHomepage p {
+    font-size: 1rem;
+  }
+
+  .middle_data_section_adminHomepage {
+    padding: 10px;
+  }
+
+  .customer_table_adminHomepage th,
+  .customer_table_adminHomepage td {
+    padding: 8px;
+    font-size: 0.7rem;
+  }
+}

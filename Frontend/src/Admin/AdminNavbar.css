@@ -1,0 +1,29 @@
+/* AdminNavbar.css */
+
+.navbarAdmin{
+    position: fixed;
+    width: 100%;
+    z-index: 1001;
+ 
+}
+.bg-body-black {
+    background: linear-gradient(135deg, #0c0426, #231d34);
+    /* Set the navbar background to black */
+    position: fixed;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    /* Set the text color to white */
+}
+
+.navbar-toggler {
+    background-color: white !important;
+    /* Make the toggle button white */
+    border: none;
+    /* Remove the border */
+}
+
+.navbar-toggler-icon {
+    color: white;
+}

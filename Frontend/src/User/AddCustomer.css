@@ -1,0 +1,76 @@
+/* Container */
+.custmerAdd-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #150d2d, #1a1625);
+}
+
+/* Box */
+.custmerAdd-box_main {
+    border: 1px solid #dbdbdb;
+    padding: 30px 40px;
+    text-align: center;
+    width: 30%;
+    margin-top: 7%;
+    border-radius: 8px;
+    background: #201b30;
+    margin-bottom: 5%;
+}
+
+/* Logo */
+.custmerAdd-logo {
+    margin-bottom: 20px;
+    color: rgb(201, 201, 201);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Form Input */
+.custmerAdd-input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    background: rgb(14, 3, 26);
+    font-size: 14px;
+    outline: none;
+    color: rgb(201, 201, 201);
+    box-sizing: border-box;
+}
+
+/* Button */
+.custmerAdd-button {
+    width: 100%;
+    padding: 10px;
+    background: rgba(14, 3, 26, 0.863);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.custmerAdd-button:hover {
+    background: rgba(14, 3, 26, 0.966);
+    color: #fff;
+}
+
+.custmerAdd-input {
+    color-scheme: dark;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .custmerAdd-box_main {
+        width: 90%;
+    }
+}

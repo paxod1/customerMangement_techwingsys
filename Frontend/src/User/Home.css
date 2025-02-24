@@ -1,0 +1,205 @@
+/* General Responsive Styles */
+:root {
+  --primary-color: #6a5af9;
+  --secondary-color: #2d2349;
+  --background-light: #f9f9f9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Top Section Styling */
+.topSectionMain_div_userHomepage {
+  padding-top: 8%;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-light);
+  flex-wrap: wrap;
+
+}
+
+.topsection_inner_div_userHompage {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+
+.topsection_card_userhomepage {
+  position: relative;
+  height: auto;
+  width: 180px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: visible;
+}
+
+.topsection_card_userhomepage:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.topsection_card_userhomepage svg {
+  position: relative;
+  font-size: 40px;
+  color: #fff;
+  background: var(--primary-color);
+  border-radius: 50%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.topsection_card_userhomepage h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.topsection_card_userhomepage p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* Middle Section Styling */
+.middle_data_section_userHomepage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0%;
+  background-color: #e8e7e776;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.middle_inner_div_userHomepage {
+  width: 95%;
+  height: 650px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.customer_table_userhomepage {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.customer_table_userhomepage th,
+.customer_table_userhomepage td {
+  padding: 10px 8px;
+  border: 1px solid #ddd;
+}
+
+.customer_table_userhomepage thead {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.customer_table_userhomepage tbody tr:nth-child(even) {
+  background-color: #f4f4f8;
+}
+
+.customer_table_userhomepage tbody tr:hover {
+  background-color: #e0e0f0;
+}
+
+.customer_actions_button_userhomepage {
+  padding: 8px 10px;
+  font-size: 0.8rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.customer_actions_button_userhomepage:hover {
+  background-color: #1b132f;
+}
+
+.searchbar_userhomepage {
+  width: 100%;
+  padding: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.searchbar_userhomepage:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(106, 90, 249, 0.5);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .topSectionMain_div_userHomepage {
+    padding-top: 19%;
+
+  }
+
+  .topsection_card_userhomepage {
+    width: 150px;
+    padding: 10px;
+  }
+
+  .topsection_card_userhomepage h3 {
+    font-size: 0.9rem;
+  }
+
+  .topsection_card_userhomepage p {
+    font-size: 1.2rem;
+  }
+
+  .customer_table_userhomepage th,
+  .customer_table_userhomepage td {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topsection_card_userhomepage {
+    width: 120px;
+    padding: 8px;
+  }
+
+  .topsection_card_userhomepage h3 {
+    font-size: 0.8rem;
+  }
+
+  .topsection_card_userhomepage p {
+    font-size: 1rem;
+  }
+
+  .middle_data_section_userHomepage {
+    padding: 10px;
+  }
+
+  .customer_table_userhomepage th,
+  .customer_table_userhomepage td {
+    padding: 8px;
+    font-size: 0.7rem;
+  }
+}
