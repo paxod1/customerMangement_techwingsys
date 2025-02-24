@@ -108,7 +108,7 @@
 /* ✅ Improved Mobile Responsiveness */
 @media (max-width: 768px) {
   .followup_sidebar {
-      width: 100%;
+      width: 80%;
       right: -100%;
   }
 
