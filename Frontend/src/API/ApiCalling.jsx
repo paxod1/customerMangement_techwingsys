@@ -21,7 +21,7 @@ export const loginUser = async (data, dispatch) => {
     const response = await basicRequest.post('/user/login', data);
     console.log(response.data);
     dispatch(LoginData(response.data));
-    alert('Login successful!');
+
 
   } catch (err) {
     // Check the error response for specific status or message
