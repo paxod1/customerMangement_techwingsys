@@ -23,14 +23,15 @@ function Home() {
   const [followups, setFollowups] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [check, setCheck] = useState(false)
+  const [loading, setLoading] = useState(true);
 
   const logininfom = useSelector((state) => state.userlogin?.LoginInfo[0]);
 
   useEffect(() => {
     if (logininfom) {
-      setTimeout(() => {
-        setExecuId(logininfom.id);
-      }, 1000);
+
+      setExecuId(logininfom.id);
+
 
     }
   }, [logininfom]);
@@ -38,6 +39,7 @@ function Home() {
   useEffect(() => {
     if (execuId) {
       async function apicallAllCustomers() {
+        setLoading(true);
         try {
           const response = await fetchcustomers(execuId);
           const customers = response.data;
@@ -85,6 +87,9 @@ function Home() {
 
         } catch (error) {
           console.error("Error fetching customer data:", error);
+        }
+        finally {
+          setLoading(false); // Set loading to false after fetching
         }
       }
       apicallAllCustomers();
@@ -164,36 +169,41 @@ function Home() {
 
       <div className="home_container">
         <div className="main_content">
-          <div className="topSectionMain_div_userHomepage">
-            <div className="topsection_inner_div_userHompage">
-              <div className="topsection_card_userhomepage" onClick={() => { setFilter("all"), setCheck(false) }}>
-                <MdPlaylistAddCheckCircle />
-                <h3>Total Customers</h3>
-                <p>{totalCustomers}</p>
-              </div>
-              <div className="topsection_card_userhomepage" onClick={() => { setFilter("interested"), setCheck(false) }}>
-                <AiFillLike />
-                <h3>Interested Customers</h3>
-                <p>{interested}</p>
-              </div>
-              <div className="topsection_card_userhomepage" onClick={() => { setFilter("ongoing"), setCheck(false) }}>
-                <MdOutlineMoving />
-                <h3>Ongoing Customers</h3>
-                <p>{ongoingCustomers}</p>
-              </div>
-              <div className="topsection_card_userhomepage" onClick={() => { setFilter("joined"), setCheck(false) }}>
-                <MdCloudDone />
-                <h3>Joined Customers</h3>
-                <p>{joinedCustomers}</p>
-              </div>
-              <div className="topsection_card_userhomepage" onClick={() => { setFilter("not_joining"), setCheck(false) }}>
-                <AiFillDislike />
-                <h3>Not Joining</h3>
-                <p>{notJoiningCustomers}</p>
+          {loading ? (
+            <div className="loading_container">
+              <p className="loading_text">Loading data, please wait...</p>
+            </div>
+          ) : (
+            <div className="topSectionMain_div_userHomepage">
+              <div className="topsection_inner_div_userHompage">
+                <div className="topsection_card_userhomepage" onClick={() => { setFilter("all"), setCheck(false) }}>
+                  <MdPlaylistAddCheckCircle />
+                  <h3>Total Customers</h3>
+                  <p>{totalCustomers}</p>
+                </div>
+                <div className="topsection_card_userhomepage" onClick={() => { setFilter("interested"), setCheck(false) }}>
+                  <AiFillLike />
+                  <h3>Interested Customers</h3>
+                  <p>{interested}</p>
+                </div>
+                <div className="topsection_card_userhomepage" onClick={() => { setFilter("ongoing"), setCheck(false) }}>
+                  <MdOutlineMoving />
+                  <h3>Ongoing Customers</h3>
+                  <p>{ongoingCustomers}</p>
+                </div>
+                <div className="topsection_card_userhomepage" onClick={() => { setFilter("joined"), setCheck(false) }}>
+                  <MdCloudDone />
+                  <h3>Joined Customers</h3>
+                  <p>{joinedCustomers}</p>
+                </div>
+                <div className="topsection_card_userhomepage" onClick={() => { setFilter("not_joining"), setCheck(false) }}>
+                  <AiFillDislike />
+                  <h3>Not Joining</h3>
+                  <p>{notJoiningCustomers}</p>
+                </div>
               </div>
             </div>
-          </div>
-
+          )}
           <div className="middle_data_section_userHomepage">
             <div className="middle_inner_div_userHomepage">
               <input
@@ -261,10 +271,12 @@ function Home() {
                     );
                   })}
                 </tbody>
-
               </table>
+
             </div>
+
           </div>
+
         </div>
       </div>
 
