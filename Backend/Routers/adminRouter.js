@@ -156,7 +156,7 @@ router.put('/UpdateExecutives', verifyToken, upload.single('profilepic'), async 
 });
 
 
-router.get('/allCustomerAdmin', verifyToken, async (req, res) => {
+router.get('/allCustomerAdmin', async (req, res) => {
     console.log("from backend>>>>>>>>>>>>>>>>>");
     try {
         const response = await customer.find(); 

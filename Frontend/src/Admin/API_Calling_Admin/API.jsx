@@ -56,7 +56,7 @@ export const allfetchcustomers = async () => {
     console.log("api>>>>>>");
 
     try {
-        const response = await AdminTokenRequest.get("/admin/allCustomerAdmin");
+        const response = await basicRequest.get("/admin/allCustomerAdmin");
         return response
     } catch (err) {
         console.error("Data not Error:", err);
