@@ -36,28 +36,7 @@ function AdminLogin() {
             onChange={((e)=>setPassword(e.target.value))}
           />
           <button className="login-button" onClick={APIcallLogin}>Log In</button>
-          <div className="divider">
-            <div className="line"></div>
-            <div className="or">OR</div>
-            <div className="line"></div>
-          </div>
-          <div className="login-with-facebook">
-            <img
-              className="facebook-logo"
-              src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-              alt="Facebook"
-            />
-            <span>Log in with Facebook</span>
-          </div>
-          <a className="forgot-password" href="#">
-            Forgot password?
-          </a>
-        </div>
-        <div className="signup-box">
-          <span>Don't have an account?</span>
-          <Link to={'/Adminsignup'} >
-            <a href="#">Sign up</a>
-          </Link>
+
         </div>
       </div>
     </div>

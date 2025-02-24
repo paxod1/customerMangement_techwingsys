@@ -16,15 +16,16 @@ function AdminHome() {
   const [joinedCustomers, setJoinedCustomers] = useState(0);
   const [notJoiningCustomers, setNotJoiningCustomers] = useState(0);
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedFilter, setSelectedFilter] = useState('all'); // New state for selected filter
+  const [selectedFilter, setSelectedFilter] = useState('all');
 
   useEffect(() => {
     async function apicallAllcustmores() {
       try {
+    
         const response = await allfetchcustomers();
         const customers = response.data;
         console.log(customers);
-        
+
         setData(customers);
 
         // Calculate counts
