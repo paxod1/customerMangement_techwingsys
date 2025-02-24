@@ -43,6 +43,9 @@ function App() {
       path: "/DailyCustomerUpdate/:id",
       element: token ? <DailyCustomerUpdate /> : <Login />
     }
+
+    // admin pages routers
+    
     ,
     {
       path: '/Adminsignup',
