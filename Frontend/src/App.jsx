@@ -41,8 +41,7 @@ function App() {
     {
       path: "/DailyCustomerUpdate/:id",
       element: token ? <DailyCustomerUpdate /> : <Login />
-    }
-    ,
+    },
     {
       path: "/Admin",
       element: Admintoken ? <AdminHome /> : <AdminLogin />

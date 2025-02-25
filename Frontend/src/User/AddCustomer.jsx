@@ -40,10 +40,6 @@ function AddCustomer() {
             console.log(err);
 
         }
-
-
-
-
     }
 
     return (
