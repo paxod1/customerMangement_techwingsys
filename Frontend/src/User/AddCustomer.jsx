@@ -14,8 +14,9 @@ function AddCustomer() {
     const [course, setCourse] = useState('');
     const [date, setDate] = useState('');
     const [execuId, setExecuId] = useState('');
-    const [otherWay, setOtherWay] = useState('');  
-    const [execuname,setExecuname]=useState('')
+    const [otherWay, setOtherWay] = useState('');
+    const [execuname, setExecuname] = useState('')
+    const [loading, setLoading] = useState(false);
 
     const logininfom = useSelector((state) => state.userlogin?.LoginInfo[0]);
     console.log("from addcustomer logininfom", logininfom);
@@ -30,8 +31,10 @@ function AddCustomer() {
     }, [logininfom]);
 
     async function apicallAdd() {
-        await addcustomer({ fullname, email, phone, way: way === "Others" ? otherWay : way, course, date, execuId,execuname });
+        setLoading(true);
+        await addcustomer({ fullname, email, phone, way: way === "Others" ? otherWay : way, course, date, execuId, execuname });
         navigate('/');
+        setLoading(false);
     }
 
     return (
@@ -120,7 +123,7 @@ function AddCustomer() {
                         type="button"
                         onClick={apicallAdd}
                     >
-                        Add Customer
+                        {loading ? <div className="spinner"></div> : "Add Customer"}
                     </button>
                 </div>
             </div>
