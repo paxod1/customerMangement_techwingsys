@@ -32,9 +32,18 @@ function AddCustomer() {
 
     async function apicallAdd() {
         setLoading(true);
-        await addcustomer({ fullname, email, phone, way: way === "Others" ? otherWay : way, course, date, execuId, execuname });
-        navigate('/');
-        setLoading(false);
+        try {
+            await addcustomer({ fullname, email, phone, way: way === "Others" ? otherWay : way, course, date, execuId, execuname });
+            setLoading(false);
+            navigate('/');
+        } catch (err) {
+            console.log(err);
+
+        }
+
+
+
+
     }
 
     return (
