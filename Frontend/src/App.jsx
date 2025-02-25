@@ -4,8 +4,8 @@ import Login from './User/Login'
 import Signup from './User/Signup'
 import { useSelector } from 'react-redux';
 import Home from './User/Home';
-import AdminHome from './Admin/AdminHome';
-import AdminLogin from './Admin/AdminLogin';
+import AdminHomes from './Admin/AdminHome';
+import AdminLogins from './Admin/AdminLogin';
 import AllExecutives from './Admin/AllExecutives';
 import ExecutiveUpdate from './Admin/ExecutiveUpdate';
 import AddCustomer from './User/AddCustomer';
