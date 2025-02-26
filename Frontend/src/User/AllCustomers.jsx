@@ -74,7 +74,6 @@ function AllCustomers() {
                                 <Link  to={`/DailyCustomerUpdate/${customer._id}`}>
                                     <button className="allCustomersPage_buttons_allExecutive" >Daily update</button>
                                 </Link>
-
                                 <button className="allCustomersPage_buttons_allExecutive">Update Profile</button>
                             </div>
                         </div>
