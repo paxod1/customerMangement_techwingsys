@@ -67,7 +67,6 @@ function App() {
       path: '/OneCustomerAdmin/:id',
       element: Admintoken ? <OneCustomerAdmin /> : <AdminLogin />
     }
-    
   ])
   return (
     <div>
