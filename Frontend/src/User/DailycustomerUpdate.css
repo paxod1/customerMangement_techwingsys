@@ -172,34 +172,87 @@
 }
 
 
-
 @media (max-width: 768px) {
- 
+  
+  .updatecustomerpage_container {
+    padding-top: 5%;
+    padding-bottom: 3%;
+  }
 
-/* call buttton */
-.call-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;  /* Adjust size as needed */
-  height: 40px;
-  background-color: #28a745; /* Green color */
-  color: white;
-  border-radius: 50%; /* Circular shape */
-  text-decoration: none;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, transform 0.2s;
+  .updatecustomerpage_innerdiv {
+    width: 95%;
+  }
+
+  .updatecustomerpage_heading {
+    font-size: 20px; /* Reduce heading size */
+    margin-bottom: 15px;
+  }
+
+  .customer_card {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .customer_details {
+    flex-direction: column; /* Stack items instead of two columns */
+    gap: 10px;
+  }
+
+  .customer_label {
+    font-size: 13px; /* Adjust label size */
+  }
+
+  .updatecustomerpage_input {
+    font-size: 15px; /* Adjust input font size */
+    padding: 8px; /* Reduce padding */
+  }
+
+  .updatecustomerpage_button {
+    width: 100%; /* Make button full width */
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  /* Daily updates list */
+  .daily_updates_list {
+    margin-top: 20px;
+  }
+
+  .daily_updates_box {
+    max-height: 300px; /* Reduce height for better scrolling */
+    padding: 10px;
+  }
+
+  .daily_update_item {
+    padding: 8px;
+  }
+
+  .daily_update_content {
+    font-size: 14px; /* Adjust content font size */
+  }
+
+  .daily_update_timestamp {
+    font-size: 0.8rem; /* Adjust timestamp size */
+  }
+
+  /* Call button styling */
+  .call-button {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1000;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    outline: 3px solid rgb(10, 7, 72);
+  }
+
+  .phone-icon {
+    font-size: 23px;
+  }
 }
-
-.call-button:hover {
-  background-color: #218838; /* Darker green on hover */
-  transform: scale(1.1);
-}
-
-.phone-icon {
-  font-size: 20px; /* Adjust icon size */
-}
-}
-
-
 
