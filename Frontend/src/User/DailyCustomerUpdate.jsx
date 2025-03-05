@@ -9,6 +9,7 @@ import { FaPhoneSquareAlt } from "react-icons/fa";
 import { MdMarkEmailRead } from "react-icons/md";
 import { FaSquareWhatsapp } from "react-icons/fa6";
 import { MdMessage } from "react-icons/md";
+import { FaPhone } from "react-icons/fa";
 
 function DailyCustomerUpdate() {
   const [data, setData] = useState(null);
@@ -57,9 +58,9 @@ function DailyCustomerUpdate() {
         reason: finalReason,
         method,
         way: finalWay,
-        followcontent, 
-        followdate, 
-        followupassigndate   
+        followcontent,
+        followdate,
+        followupassigndate
       });
 
       console.log("Update Successful", response);
@@ -72,9 +73,9 @@ function DailyCustomerUpdate() {
 
       setDailyUpdate("");
       setContact("");
-      setOtherWay(""); 
-      setFollowcontent(''); 
-      setFollowdate('');   
+      setOtherWay("");
+      setFollowcontent('');
+      setFollowdate('');
       setFollowupassigndate('')
     } catch (err) {
       console.error("Error in updating customer:", err);
@@ -157,7 +158,11 @@ function DailyCustomerUpdate() {
               <div className="customer_card">
                 <div className="customer_card_header">
                   <h3 className="customer_name">{data.fullname}</h3>
+                  <a href={`tel:${data.phone}`} className="call-button">
+                  <FaPhone className="phone-icon" />
+                </a>
                 </div>
+             
                 <div className="customer_details">
                   <div className="left_column">
                     <label>
@@ -186,7 +191,7 @@ function DailyCustomerUpdate() {
                         disabled
                       >
                         <option value="way">{way}</option>
-                       
+
                       </select>
                       {way === "Others" && (
                         <input
@@ -283,7 +288,7 @@ function DailyCustomerUpdate() {
                           allDailyUpdates.slice().reverse().map((update, index) => (
                             <div key={index} className="daily_update_item">
 
-                              <div className="daily_update_icon_timestamp"style={{ whiteSpace: 'pre-wrap' }}>
+                              <div className="daily_update_icon_timestamp" style={{ whiteSpace: 'pre-wrap' }}>
                                 <div className="daily_update_icon">
                                   {update.contact === "N/A" && "N/A"}
                                   {update.contact === "call" && (
