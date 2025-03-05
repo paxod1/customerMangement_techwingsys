@@ -23,7 +23,7 @@ function UserNavbar() {
       <Navbar collapseOnSelect expand="lg" className="bg-body-black">
         <Container>
           <Navbar.Brand>
-            <h6 style={{ color: "white" }} >EXECUTIVE</h6>
+            <img  src="https://res.cloudinary.com/dqgrcovgg/image/upload/v1741189757/WHITE----_2_jzrvnj.png" height={'30px'} width={'130px'} alt="" />
 
           </Navbar.Brand>
 
