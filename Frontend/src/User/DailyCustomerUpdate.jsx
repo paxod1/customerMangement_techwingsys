@@ -159,10 +159,10 @@ function DailyCustomerUpdate() {
                 <div className="customer_card_header">
                   <h3 className="customer_name">{data.fullname}</h3>
                   <a href={`tel:${data.phone}`} className="call-button">
-                  <FaPhone className="phone-icon" />
-                </a>
+                    <FaPhone className="phone-icon" />
+                  </a>
                 </div>
-             
+
                 <div className="customer_details">
                   <div className="left_column">
                     <label>
@@ -335,7 +335,12 @@ function DailyCustomerUpdate() {
               </div>
             </div>
           ) : (
-            <p>Loading...</p>
+            <div className="loading">
+            
+              <p className="spinner">
+         
+              </p>
+            </div>
           )}
         </div>
       </div>

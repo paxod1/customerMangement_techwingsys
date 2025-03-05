@@ -29,9 +29,9 @@ function Home() {
 
   useEffect(() => {
     if (logininfom) {
- 
-        setExecuId(logininfom.id);
-     
+
+      setExecuId(logininfom.id);
+
     }
   }, [logininfom]);
 
@@ -203,6 +203,8 @@ function Home() {
               </div>
             </div>
           )}
+
+
           <div className="middle_data_section_userHomepage">
             <div className="middle_inner_div_userHomepage">
               <input
@@ -226,6 +228,8 @@ function Home() {
               >
                 Recently Update
               </button>
+
+              {/* Table for Desktop */}
               <table className="customer_table_userhomepage">
                 <thead>
                   <tr>
@@ -256,7 +260,7 @@ function Home() {
                         <td>{customer.status}</td>
                         <td>
                           {check === true
-                            ? new Date(latestUpdateDate).toLocaleDateString("en-GB")  // Display latest update if 'check' is true
+                            ? new Date(latestUpdateDate).toLocaleDateString("en-GB")
                             : new Date(customer.date).toLocaleDateString("en-GB")}
                         </td>
                         <td>
@@ -272,9 +276,57 @@ function Home() {
                 </tbody>
               </table>
 
-            </div>
+              {/* Cards for Mobile */}
+              <div className="customer_cards_container">
+                {filteredData.map((customer, index) => {
+                  const latestUpdateDate = customer.dailyUpdate
+                    ?.sort((a, b) => new Date(b.date) - new Date(a.date))[0]?.date;
 
+                  return (
+                    <div className="customer_card" key={index}>
+                      <div className="customer_card_item">
+                        <strong>Name:</strong> {customer.fullname}
+                      </div>
+                      <div className="customer_card_item">
+                        <strong>Email:</strong> {customer.email}
+                      </div>
+                      <div className="customer_card_item">
+                        <strong>Phone:</strong> {customer.phone}
+                      </div>
+                      <div className="customer_card_item">
+                        <strong>Course:</strong> {customer.course}
+                      </div>
+                      <div className="customer_card_item">
+                        <strong>Method:</strong> {customer.method}
+                      </div>
+                      <div className="customer_card_item">
+                        <strong>Status:</strong> {customer.status}
+                      </div>
+                      <div className="customer_card_item">
+                        <strong>Date:</strong>{" "}
+                        {check === true
+                          ? new Date(latestUpdateDate).toLocaleDateString("en-GB")
+                          : new Date(customer.date).toLocaleDateString("en-GB")}
+                      </div>
+                      <div className="customer_card_item">
+                        <Link to={`/DailyCustomerUpdate/${customer._id}`}>
+                          <button className="customer_actions_button_userhomepage">
+                            Daily Update
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
+
+
+
+
+
+
 
         </div>
       </div>
