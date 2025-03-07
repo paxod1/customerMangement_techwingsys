@@ -102,8 +102,13 @@ body {
   }
 
   .topsection_card_userhomepage {
-    max-width: 160px;
+    max-width: 150px;
     padding: 10px;
+
+  }
+  .topsection_card_userhomepage p {
+    font-size: 15px;
+
   }
 }
 
