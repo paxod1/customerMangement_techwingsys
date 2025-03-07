@@ -216,11 +216,11 @@ function DailyCustomerUpdate() {
                     </label>
 
                     <label>
-                      <span className="customer_label_admin">Status:</span>
+                      <span className="customer_label">Status:</span>
                       <select
                         value={status}
                         onChange={handleStatusChange}
-                        className="updatecustomerpage_input_admin"
+                        className="updatecustomerpage_input"
                       >
                         <option value="">Status</option>
                         <option value="interested">Interested</option>
