@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Getoneupdatecustomer } from "../API/ApiCalling";
-import { TokenRequest } from "../AxiosCreate";
+import { AdminTokenRequest } from '../AxiosCreate';
 import Footer from "./Footer";
 import UserNavbar from "./UserNavbar";
 import "./DailycustomerUpdate.css";
@@ -50,7 +50,7 @@ function DailyCustomerUpdate() {
     try {
       console.log("from way", finalWay);
 
-      const response = await TokenRequest.put("/user/custerdailyupdate", {
+      const response = await AdminTokenRequest.put("/user/custerdailyupdate", {
         id,
         updatedData: { ...updatedData },
         dailyUpdate: { update: dailyUpdate, contact },
