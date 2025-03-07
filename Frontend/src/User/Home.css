@@ -28,68 +28,97 @@ body {
 /* Top Section Styling */
 .topSectionMain_div_userHomepage {
   padding-top: 8%;
-  height: auto;
+  padding-bottom: 5%;
   width: 100%;
   display: flex;
   justify-content: center;
   background-color: var(--background-light);
   flex-wrap: wrap;
-
 }
 
 .topsection_inner_div_userHompage {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 15px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* More responsive */
+  gap: 10px;
+  justify-content: center;
 }
 
+/* Card Styling */
 .topsection_card_userhomepage {
   position: relative;
-  height: auto;
-  width: 180px;
+  width: 100%;
+  max-width: 180px; /* Restrict max width */
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px;
-  margin-bottom: 15px;
+  padding: 12px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: visible;
 }
 
+/* Hover Effect */
 .topsection_card_userhomepage:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.04);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 
+/* Icon Styling */
 .topsection_card_userhomepage svg {
-  position: relative;
-  font-size: 40px;
+  font-size: clamp(30px, 4vw, 40px); /* Adjusts dynamically */
   color: #fff;
   background: var(--primary-color);
   border-radius: 50%;
-  padding: 8px;
-  margin-bottom: 10px;
+  padding: 6px;
+  margin-bottom: 8px;
 }
 
+/* Text Styling */
 .topsection_card_userhomepage h3 {
-  font-size: 1rem;
-  margin-bottom: 8px;
+  font-size: clamp(0.8rem, 1.8vw, 1.1rem);
+  margin-bottom: 6px;
   text-transform: uppercase;
 }
 
 .topsection_card_userhomepage p {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2vw, 1.3rem);
   font-weight: bold;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .topSectionMain_div_userHomepage {
+    padding-top: 19%;
+  }
+
+  .topsection_inner_div_userHompage {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .topsection_card_userhomepage {
+    max-width: 160px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topsection_inner_div_userHompage {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+  }
+
+  .topsection_card_userhomepage {
+    max-width: 140px;
+    padding: 8px;
+  }
+}
+
 
 /* Middle Section Styling */
 .middle_data_section_userHomepage {
@@ -168,47 +197,3 @@ body {
 }
 
 
-/* Media Query for Mobile */
-@media (max-width: 768px) {
-
-
-
-}
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .topSectionMain_div_userHomepage {
-    padding-top: 19%;
-
-  }
-
-  .topsection_card_userhomepage {
-    width: 150px;
-    padding: 10px;
-  }
-
-  .topsection_card_userhomepage h3 {
-    font-size: 0.9rem;
-  }
-
-  .topsection_card_userhomepage p {
-    font-size: 1.2rem;
-  }
-
-}
-
-@media (max-width: 480px) {
-  .topsection_card_userhomepage {
-    width: 120px;
-    padding: 8px;
-  }
-
-  .topsection_card_userhomepage h3 {
-    font-size: 0.8rem;
-  }
-
-  .topsection_card_userhomepage p {
-    font-size: 1rem;
-  }
-
-
-}
