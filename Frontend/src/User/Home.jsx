@@ -245,80 +245,43 @@ function Home() {
                   </tr>
                 </thead>
                 <tbody>
-                  {filteredData.map((customer, index) => {
-                    const latestUpdateDate = customer.dailyUpdate
-                      ?.sort((a, b) => new Date(b.date) - new Date(a.date))[0]?.date;
-
-                    return (
-                      <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>{customer.fullname}</td>
-                        <td>{customer.email}</td>
-                        <td>{customer.phone}</td>
-                        <td>{customer.course}</td>
-                        <td>{customer.method}</td>
-                        <td>{customer.status}</td>
-                        <td>
-                          {check === true
-                            ? new Date(latestUpdateDate).toLocaleDateString("en-GB")
-                            : new Date(customer.date).toLocaleDateString("en-GB")}
-                        </td>
-                        <td>
-                          <Link to={`/DailyCustomerUpdate/${customer._id}`}>
-                            <button className="customer_actions_button_userhomepage">
-                              Daily Update
-                            </button>
-                          </Link>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-
-              {/* Cards for Mobile */}
-              <div className="customer_cards_container">
                 {filteredData.map((customer, index) => {
                   const latestUpdateDate = customer.dailyUpdate
                     ?.sort((a, b) => new Date(b.date) - new Date(a.date))[0]?.date;
-
+                
                   return (
-                    <div className="customer_card" key={index}>
-                      <div className="customer_card_item">
-                        <strong>Name:</strong> {customer.fullname}
-                      </div>
-                      <div className="customer_card_item">
-                        <strong>Email:</strong> {customer.email}
-                      </div>
-                      <div className="customer_card_item">
-                        <strong>Phone:</strong> {customer.phone}
-                      </div>
-                      <div className="customer_card_item">
-                        <strong>Course:</strong> {customer.course}
-                      </div>
-                      <div className="customer_card_item">
-                        <strong>Method:</strong> {customer.method}
-                      </div>
-                      <div className="customer_card_item">
-                        <strong>Status:</strong> {customer.status}
-                      </div>
-                      <div className="customer_card_item">
-                        <strong>Date:</strong>{" "}
-                        {check === true
+                    <tr key={index}>
+                      <td>{index + 1}</td>
+                      <td>
+                        <Link style={{textDecoration:'none'}} to={`/DailyCustomerUpdate/${customer._id}`}>
+                          {customer.fullname}
+                        </Link>
+                      </td>
+                      <td>{customer.email}</td>
+                      <td>{customer.phone}</td>
+                      <td>{customer.course}</td>
+                      <td>{customer.method}</td>
+                      <td>{customer.status}</td>
+                      <td>
+                        {check
                           ? new Date(latestUpdateDate).toLocaleDateString("en-GB")
                           : new Date(customer.date).toLocaleDateString("en-GB")}
-                      </div>
-                      <div className="customer_card_item">
+                      </td>
+                      <td>
                         <Link to={`/DailyCustomerUpdate/${customer._id}`}>
                           <button className="customer_actions_button_userhomepage">
                             Daily Update
                           </button>
                         </Link>
-                      </div>
-                    </div>
+                      </td>
+                    </tr>
                   );
                 })}
-              </div>
+                
+                </tbody>
+              </table>
+
+
             </div>
           </div>
 
